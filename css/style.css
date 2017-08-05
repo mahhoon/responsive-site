@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/*base-----------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fdfcf6; }
+
+/*ヘッダー--------------------*/
+.headerimage {
+  background-image: url("../coffee20160715235104_TP_V.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+.title {
+  width: 80%;
+  margin: 0 auto;
+  cleat: both;
+  text-align: center;
+  margin-top: 30px; }
+
+.site-title {
+  font-size: 4rem;
+  text-transform: uppercase; }
+
+/*コンテンツ----------------------*/
+.contents {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 10px 40px;
+  margin-bottom: 20px; }
+
+.box {
+  flex: 1;
+  background-color: #fff6be;
+  margin: 15px; }
+
+.midashi {
+  background-color: #14c0c9;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.6rem; }
+
+.setumei {
+  padding: 15px; }
+
+/*ボタン-------------------------*/
+footer {
+  text-align: center;
+  background-color: #bea300;
+  padding: 20px; }
+
+.button {
+  width: 200px;
+  margin: 10px auto 0px;
+  background-color: #14c0c9;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 0px;
+  display: block;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+/*デスクトップ---------------------------*/
+@media (min-width: 769px) {
+  /*ヘッダー-------------------*/
+  .headerimage {
+    background-image: url("../coffee20160715235104_TP_V.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center; }
+
+  /*縦に並べる-----------------*/
+  .contents {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px; }
+
+  /*ロールオーバー-------------*/
+  footer a:hover {
+    background-color: #0b676c; } }
+
+/*# sourceMappingURL=style.css.map */

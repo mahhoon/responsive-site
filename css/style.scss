@@ -1,0 +1,118 @@
+@import "compass";
+
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+/*base-----------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+/*ヘッダー--------------------*/
+.headerimage{
+    background-image:url("../coffee20160715235104_TP_V.jpg");
+    // background-image: url('../......');
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.title {
+  width: 80%;
+  margin: 0 auto;
+  cleat: both;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.site-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+/*コンテンツ----------------------*/
+.contents {
+  @include display-flex;
+  justify-content: space-between;
+  @include flex-direction(column);
+  padding: 10px 40px;
+  margin-bottom: 20px;
+}
+
+.box {
+  flex: 1;
+  background-color: lighten($subColor, 50%);
+  margin: 15px;
+}
+
+.midashi {
+  background-color: $keyColor;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+.setumei {
+  padding: 15px;
+}
+
+/*ボタン-------------------------*/
+footer {  
+  text-align: center; 
+  background-color: $subColor;
+  padding: 20px;
+}
+
+ .button {
+    width: 200px;
+    margin: 10px auto 0px;
+    background-color: $keyColor;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0px;
+    display: block; 
+    @include border-radius(4px);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+/*デスクトップ---------------------------*/
+  @media (min-width: 769px){
+    /*ヘッダー-------------------*/
+    .headerimage{
+      background-image:url("../coffee20160715235104_TP_V.jpg");
+      // background-image: url('../......');
+      height: 500px;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+    }
+    /*縦に並べる-----------------*/
+    .contents{
+      @include flex-direction(row);
+      justify-content: space-between;
+      padding:20px 50px;
+    }
+    /*ロールオーバー-------------*/
+    footer{
+      a{
+        &:hover{
+          background-color: darken($keyColor, 20%);
+        }
+      }
+    }
+  }
